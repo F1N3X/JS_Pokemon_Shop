@@ -1,0 +1,170 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5%;
+  justify-content: space-between;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  margin-top: auto;
+  height: calc(100vh - 10rem);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.container .panier {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+.container .panier h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  background-color: rgb(228, 251, 255);
+  border: 5px solid black;
+  padding: 2%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .container .panier h1 {
+    font-size: 1.5rem;
+  }
+}
+.container .panier .panier_items {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 50vh;
+  overflow-y: scroll;
+}
+.container .panier .panier_items .pokemon_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  background-color: rgb(228, 251, 255);
+}
+@media screen and (max-width: 768px) {
+  .container .panier .panier_items .pokemon_info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container .panier .panier_items .pokemon_info img {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .container .panier .panier_items .pokemon_info img {
+    width: 60%;
+  }
+}
+.container .panier .panier_items .pokemon_info h1 {
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .container .panier .panier_items .pokemon_info h1 {
+    justify-content: center;
+  }
+}
+.container .panier .panier_items .pokemon_info .pokemon_decision {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media screen and (max-width: 768px) {
+  .container .panier .panier_items .pokemon_info .pokemon_decision {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container .panier .panier_items .pokemon_info .pokemon_decision button {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: rgb(228, 251, 255);
+  transition: all 0.1s linear;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.container .panier .panier_items .pokemon_info .pokemon_decision button:hover {
+  background-color: rgb(227, 34, 34);
+  color: whitesmoke;
+  transition: all 0.1s linear;
+  transform: scale(1.1);
+}
+.container .paying {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .paying .solde {
+  font-size: 2rem;
+  background-color: rgb(228, 251, 255);
+  border: 3px solid black;
+}
+.container .paying .to_pay {
+  display: flex;
+  flex-direction: column;
+}
+.container .paying .to_pay .shopping_list .list {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  height: 30vh;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border: 3px solid black;
+  overflow-y: scroll;
+  align-items: start;
+  justify-content: center;
+}
+.container .paying .to_pay .shopping_list .list .pokemon_shopping {
+  margin: 3%;
+}
+.container .paying .to_pay .shopping_list .total {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.container .paying .to_pay .to_pay_button {
+  font-size: 2rem;
+  padding: 1%;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.container .paying .to_pay .to_pay_button:hover {
+  background-color: rgb(203, 240, 240);
+  transition: all 0.1s linear;
+  transform: scale(1.1);
+}/*# sourceMappingURL=panier.css.map */

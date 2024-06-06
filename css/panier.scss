@@ -1,0 +1,184 @@
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5%;
+    justify-content: space-between;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-top: auto;
+    height: calc(100vh - 10rem);
+    text-align: center;
+
+    @media screen and (max-width: 768px){
+        width: 95%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .panier{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+
+
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bolder;
+            background-color: rgb(228, 251, 255);
+            border: 5px solid black;
+            padding: 2%;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media screen and (max-width: 768px){
+                font-size: 1.5rem;
+            }
+        }
+
+        .panier_items{
+            display: flex;
+            flex-direction: column;
+            gap: 5%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            height: 50vh;
+            overflow-y: scroll;
+
+            .pokemon_info{
+                display: grid;
+                grid-template-columns: 1fr 1fr 2fr;
+                background-color: rgb(228, 251, 255);
+
+                @media screen and (max-width: 768px){
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                img{
+                    width: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    @media screen and (max-width: 768px){
+                        width: 60%;
+                    }
+                }
+
+                h1{
+                    font-size: 1.2rem;
+                    background-color: rgba($color: #000000, $alpha: 0.0);
+                    border: none;
+                    text-align: start;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+
+                    @media screen and (max-width: 768px){
+                        justify-content: center;
+                    }
+                }
+
+                .pokemon_decision{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    @media screen and (max-width: 768px){
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    button{
+                        width: max-content;
+                        height: max-content;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding: 1%;
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                        border: 2px solid black;
+                        background-color: rgb(228, 251, 255);
+                        transition: all 0.1s linear;
+                        margin-top: 2%;
+                        margin-bottom: 2%;
+                    }
+
+                    button:hover{
+                        background-color: rgb(227, 34, 34);
+                        color: whitesmoke;
+                        transition: all 0.1s linear;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    .paying{
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+
+        .solde{
+            font-size: 2rem;
+            background-color: rgb(228, 251, 255);
+            border: 3px solid black;
+        }
+
+        .to_pay{
+            display: flex;
+            flex-direction: column;
+
+            .shopping_list{
+
+                .list{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5%;
+                    height: 30vh;
+                    margin-top: 10%;
+                    margin-bottom: 10%;
+                    border: 3px solid black;
+                    overflow-y: scroll;
+                    align-items: start;
+                    justify-content: center;
+
+                    .pokemon_shopping{
+                        margin: 3%;
+                    }
+                }
+
+                .total{
+                    font-size: 2rem;
+                    font-weight: bolder;
+                    margin-bottom: 5%;
+                    text-align: center;
+                }
+
+            }
+
+            .to_pay_button{
+                font-size: 2rem;
+                padding: 1%;
+                cursor: pointer;
+                transition: all 0.1s linear ;
+            }
+
+            .to_pay_button:hover{
+                background-color: rgb(203, 240, 240);
+                transition: all 0.1s linear;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
